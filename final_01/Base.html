@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHICAGO // 2050</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ PRIMERA PARTE ============ -->
+
+  <!-- Barra superior -->
+  <header>
+    <nav>
+      <span class="nav-titulo">CHICAGO // 2050</span>
+      <a href="#promesas">Promesas</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#manifiesto">Manifiesto</a>
+      <span class="estado-sistema">SISTEMA: ÓPTIMO</span>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Portada con parallax -->
+    <section id="hero">
+      <div class="capa capa-ciudad" data-profundidad="0.02"></div>
+      <div class="capa capa-cascada" data-profundidad="0.05"></div>
+      <div class="capa capa-particulas" data-profundidad="0.1"></div>
+
+      <div class="hero-contenido">
+        <h1>Visita la última naturaleza de Chicago</h1>
+        <p>Aire filtrado, verde preservado y silencio garantizado. Solo para quienes puedan pagarlo.</p>
+        <a href="#mapa" class="boton">Explorar el mapa</a>
+      </div>
+    </section>
+
+    <!-- Las 3 tarjetas con letra pequeña -->
+    <section id="promesas">
+      <div class="contenedor-promesas">
+        <article>
+          <h2>Aire certificado</h2>
+          <p>Cada respiración pasa por 14 filtros y llega a ti con sello de pureza.</p>
+          <p class="letra-pequena">*El aire certificado caduca al exhalar. El usuario renuncia a reclamar el oxígeno ya consumido.</p>
+        </article>
+
+        <article>
+          <h2>Última zona verde</h2>
+          <p>El único parque que queda en la ciudad, mantenido para tu bienestar.</p>
+          <p class="letra-pequena">*El verde es propiedad de la corporación. Mirar el césped por más de 3 minutos se considera uso comercial.</p>
+        </article>
+
+        <article>
+          <h2>Cupos limitados</h2>
+          <p>Solo un número reducido de visitantes accede cada día.</p>
+          <p class="letra-pequena">*Los cupos se reducen automáticamente cuando alguien parece demasiado feliz.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Mapa 3D -->
+    <section id="mapa">
+      <div class="columnas-mapa">
+        <div id="contenedor-mapa-3d">
+          <!-- Aquí se conectará el mapa 3D -->
+        </div>
+
+        <aside id="ficha-zona">
+          <h2>Ficha de zona</h2>
+          <p id="ficha-texto">Toca una zona del mapa para ver su tarifa.</p>
+          <!-- Ejemplo de contenido dinámico: Respirar 15 min: $480 -->
+        </aside>
+      </div>
+    </section>
+
+    <!-- Escasez + precios con audio -->
+    <section id="tarifas">
+      <p class="aviso-cupos">Quedan <span id="contador-cupos">15</span> cupos hoy</p>
+
+      <div class="contenedor-tarifas">
+        <article class="tarjeta-tarifa" data-audio="assets/pajaros.mp3">
+          <h3>Básico</h3>
+          <p>Acceso a la zona exterior.</p>
+          <div class="aviso-pago">Muestra de 10s agotada. Paga para continuar</div>
+        </article>
+
+        <article class="tarjeta-tarifa" data-audio="assets/pajaros.mp3">
+          <h3>Plus</h3>
+          <p>Zona verde y cascada.</p>
+          <div class="aviso-pago">Muestra de 10s agotada. Paga para continuar</div>
+        </article>
+
+        <article class="tarjeta-tarifa" data-audio="assets/pajaros.mp3">
+          <h3>VIP</h3>
+          <p>Acceso total sin filtros.</p>
+          <div class="aviso-pago">Muestra de 10s agotada. Paga para continuar</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- El botón que rompe la página -->
+    <section id="detonante">
+      <h2>¿Realmente quieres seguir respirando lo que te venden?</h2>
+      <button id="btn-glitch" type="button">
+        <span class="barra-carga"></span>
+        Mantén presionado
+      </button>
+    </section>
+
+    <!-- ============ SEGUNDA PARTE ============ -->
+    <div id="parte-oculta" class="oculto">
+
+      <!-- Bitácora del androide -->
+      <section id="hero-b">
+        <p class="aviso-comprometido">SISTEMA COMPROMETIDO</p>
+        <h2>Bitácora del Androide</h2>
+        <div class="visual-ovejas" role="img" aria-label="Ovejas eléctricas">
+          <!-- Imagen o visual de ovejas eléctricas -->
+        </div>
+        <div id="zona-seguidores">
+          <!-- Elementos que seguirán al cursor -->
+          <div class="seguidor"></div>
+          <div class="seguidor"></div>
+          <div class="seguidor"></div>
+        </div>
+      </section>
+
+      <!-- Antes y después -->
+      <section id="mapa-real">
+        <h2>Antes y después</h2>
+        <div class="comparador">
+          <div class="vista-torres">
+            <!-- Vista de torres artificiales -->
+          </div>
+        </div>
+        <label for="deslizador-realidad">Arrastra para ver la realidad</label>
+        <input type="range" id="deslizador-realidad" min="0" max="100" value="50">
+      </section>
+
+      <!-- Los 5 principios incompletos -->
+      <section id="manifiesto">
+        <h2>Manifiesto</h2>
+        <ol>
+          <li>El aire no debería ser <input type="text" class="espacio-blanco" placeholder="____"> de nadie.</li>
+          <li>La naturaleza no es un <input type="text" class="espacio-blanco" placeholder="____">.</li>
+          <li>Respirar es un <input type="text" class="espacio-blanco" placeholder="____">, no un servicio.</li>
+          <li>Ninguna ciudad debería vender su <input type="text" class="espacio-blanco" placeholder="____">.</li>
+          <li>Lo que es real no necesita <input type="text" class="espacio-blanco" placeholder="____">.</li>
+        </ol>
+      </section>
+
+      <!-- Tu reflexión -->
+      <section id="postura">
+        <article>
+          <h2>No somos nuestras funciones</h2>
+          <p>[Escribe aquí tu manifiesto.]</p>
+          <p>[Escribe aquí tu postura frente a Jarrett Fuller.]</p>
+        </article>
+      </section>
+
+      <!-- Cierre y tarjeta -->
+      <section id="firma">
+        <h2>Firma el manifiesto</h2>
+        <form id="form-firma">
+          <label for="nombre-firma">Tu nombre</label>
+          <input type="text" id="nombre-firma" name="nombre" required>
+          <button type="submit">Firmar</button>
+        </form>
+        <div id="tarjeta-final">
+          <!-- Aquí aparecerá la tarjeta generada con tu frase para compartir -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
