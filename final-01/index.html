@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHICAGO 2050 — Public Information System</title>
+  <meta name="description" content="Certified nature. Tiered access. Chicago 2050 public information system.">
+
+  <!-- Google Fonts: Pixelify Sans + fallbacks (Press Start 2P, VT323, Space Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Capa de fondo: cuadrícula + scanlines -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       A. HEADER
+       ========================================================= -->
+  <header class="site-header" id="top">
+    <a href="#top" class="logo" aria-label="Chicago 2050 — inicio">
+      <span class="logo__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="5" width="18" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="9" width="6" height="4" fill="currentColor"/></svg>
+      </span>
+      <span class="logo__text">CHICAGO <span class="logo__glyph" aria-hidden="true">⌿</span> 2050</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Principal">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+        <span class="nav-toggle__prompt">&gt;_</span> MENU
+      </button>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#system" class="tab-btn">SYSTEM</a></li>
+        <li><a href="#territory" class="tab-btn">TERRITORY</a></li>
+        <li><a href="#archive" class="tab-btn">ARCHIVE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+         B. HERO
+         ========================================================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="micro hero__micro">PUBLIC INFORMATION SYSTEM // CHICAGO 2050</p>
+
+      <div class="hero__content">
+        <p class="subtitle hero__subtitle">Certified nature. Tiered access.</p>
+        <h1 class="display glow glitch" id="hero-title" data-text="NATURE HAS BEEN PERFECTED.">NATURE HAS BEEN PERFECTED.</h1>
+        <p class="paragraph hero__text">
+          Ecosystems have been optimized. Animal life, reproduced. Every element now serves a purpose
+          within a stable, safe, and measurable system.
+        </p>
+        <a href="#system" class="btn-primary">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="currentColor"/></svg>
+          EXPLORE SYSTEM
+        </a>
+      </div>
+    </section>
+
+    <!-- Ticker 1 -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" data-ticker>
+        // CERTIFIED NATURE // TIERED ACCESS // CHICAGO 2050 // E-SHEEP ONLINE // LIFE CONTROL ACTIVE // ORIGEN RESTRICTED
+      </div>
+    </div>
+
+    <!-- =========================================================
+         C. 02 // SYSTEM BENEFITS — CARRUSEL
+         ========================================================= -->
+    <section class="section benefits" id="system" aria-labelledby="benefits-title">
+      <div class="container">
+        <p class="micro">02 // SYSTEM BENEFITS</p>
+        <h2 class="section-title glow" id="benefits-title">A LIFE WITHOUT SURPRISES.</h2>
+        <p class="paragraph section-sub">Technology has eliminated the uncertainty of old ecosystems. Experiences are now available by reservation.</p>
+      </div>
+
+      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="System units">
+        <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="Unidad anterior">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 4 L7 12 L15 20" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+        </button>
+
+        <div class="carousel__stage" data-stage>
+          <!-- Las tarjetas se generan desde script.js (datos en CARDS) -->
+        </div>
+
+        <button class="carousel__arrow carousel__arrow--next" data-next aria-label="Unidad siguiente">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 4 L17 12 L9 20" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+        </button>
+
+        <button class="click-tab" data-click-tab>
+          <span>↑ click here</span>
+        </button>
+
+        <div class="carousel__dots" data-dots role="tablist" aria-label="Seleccionar unidad"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         D. 03 // TERRITORIAL CONTROL — MAPA 3D
+         ========================================================= -->
+    <section class="section territory" id="territory" aria-labelledby="territory-title">
+      <div class="container">
+        <p class="micro">03 // TERRITORIAL CONTROL</p>
+        <h2 class="section-title glow" id="territory-title">CHICAGO / TERRITORIAL CONTROL</h2>
+        <p class="paragraph section-sub">Production zones, artificial habitats, and monitoring stations.</p>
+        <p class="micro micro--tight">3D TERRITORY / LAYER VIEW</p>
+
+        <div class="map-frame" data-map-frame>
+          <!-- Esquinas técnicas -->
+          <span class="corner corner--tl" aria-hidden="true"></span>
+          <span class="corner corner--tr" aria-hidden="true"></span>
+          <span class="corner corner--bl" aria-hidden="true"></span>
+          <span class="corner corner--br" aria-hidden="true"></span>
+
+          <!-- Proyecto Three.js -->
+          <iframe
+            class="map-frame__iframe"
+            src="https://sofiavicmolina.github.io/LabUX-UI/Chicago2050_ThreeJS_Integracion/"
+            title="Chicago 2050 — mapa territorial 3D"
+            loading="lazy"
+            allow="fullscreen; accelerometer; gyroscope"
+            allowfullscreen></iframe>
+
+          <!-- HUD superpuesto -->
+          <div class="hud hud--tl">
+            <p class="hud__title">CHICAGO // URBAN DATA GRID</p>
+            <p class="hud__sub">COOK COUNTY · SYS v4.8.1 · <span class="blink">LIVE</span></p>
+          </div>
+
+          <div class="hud hud--tr hud--metrics">
+            <dl class="metrics">
+              <div><dt>POPULATION</dt><dd>2.7M</dd></div>
+              <div><dt>AREA</dt><dd>606 KM²</dd></div>
+              <div><dt>MEAN ELEV</dt><dd>181 M</dd></div>
+              <div><dt>NODES ACTIVE</dt><dd data-nodes>4809</dd></div>
+              <div><dt>DATA FLUX</dt><dd data-flux>2.34 TB/S</dd></div>
+            </dl>
+            <div class="bars" data-bars aria-hidden="true"></div>
+          </div>
+
+          <div class="hud hud--bl">
+            <p class="hud__title">CHICAGO</p>
+            <p class="hud__sub">0 - 5 KM / TERRITORIAL SCAN</p>
+          </div>
+
+          <button class="hud hud--br hud--action" data-open-map>
+            <span class="hud__title hud__title--lg">OPEN 3D MAP</span>
+            <span class="hud__sub">Discover where to find your resources!</span>
+          </button>
+        </div>
+
+        <ul class="legend">
+          <li><span class="dot dot--green"></span>E-SHEEP FACILITY</li>
+          <li><span class="dot dot--yellow"></span>BIO-DOME</li>
+          <li><span class="dot dot--bright"></span>MONITORING STATION</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Ticker 2 -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" data-ticker>
+        // CERTIFIED NATURE // TIERED ACCESS // CHICAGO 2050 // E-SHEEP ONLINE // LIFE CONTROL ACTIVE // ORIGEN RESTRICTED
+      </div>
+    </div>
+
+    <!-- =========================================================
+         E. 04 // CLASSIFIED ARCHIVE
+         ========================================================= -->
+    <section class="section archive" id="archive" aria-labelledby="archive-title">
+      <div class="container">
+        <p class="micro">04 // CLASSIFIED ARCHIVE</p>
+
+        <div class="archive-box">
+          <div class="archive-box__head">
+            <span class="micro">// CLASSIFIED ARCHIVE / CHICAGO 2050</span>
+            <span class="micro">[ RESTRICTED ACCESS ]</span>
+          </div>
+
+          <h2 class="section-title glow archive-box__title" id="archive-title">NOT EVERYTHING IS UNDER CONTROL.</h2>
+          <p class="subtitle archive-box__sub">Some truths were never meant to be accessed.</p>
+
+          <div class="dashes" aria-hidden="true"></div>
+
+          <button class="btn-restricted" data-restricted>( ACCESS RESTRICTED FILES )</button>
+
+          <p class="micro archive-box__foot">SECURITY PROTOCOL ACTIVE &nbsp;&nbsp;//&nbsp;&nbsp; UNAUTHORIZED ACCESS LOGGED</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="micro">© CHICAGO 2050 · PUBLIC INFORMATION SYSTEM · ALL ORGANISMS MONITORED</p>
+  </footer>
+
+  <!-- =========================================================
+       MODALES
+       ========================================================= -->
+  <!-- Mapa a pantalla completa -->
+  <div class="modal modal--map" data-modal="map" role="dialog" aria-modal="true" aria-label="Mapa 3D a pantalla completa" hidden>
+    <div class="modal__bar">
+      <span class="micro">3D TERRITORY / FULL VIEW</span>
+      <button class="modal__close" data-close aria-label="Cerrar">[ X ] CLOSE</button>
+    </div>
+    <div class="modal__body" data-map-slot></div>
+  </div>
+
+  <!-- Acceso denegado -->
+  <div class="modal modal--terminal" data-modal="denied" role="alertdialog" aria-modal="true" aria-labelledby="denied-title" hidden>
+    <div class="terminal">
+      <div class="terminal__bar">
+        <span class="micro">root@chicago2050:~/archive</span>
+        <button class="modal__close" data-close aria-label="Cerrar">[ X ]</button>
+      </div>
+      <pre class="terminal__out" data-terminal></pre>
+      <h3 class="terminal__denied glow" id="denied-title" hidden>ACCESS DENIED</h3>
+      <p class="terminal__note micro" hidden>INSUFFICIENT AUTHORIZATION LEVEL · INCIDENT #<span data-incident></span> LOGGED</p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
